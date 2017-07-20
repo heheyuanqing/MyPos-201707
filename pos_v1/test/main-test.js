@@ -38,8 +38,8 @@ describe('pos', () => {
 });
 
 
-describe('unit test',()=> {
-  describe('buildItems', ()=> {
+describe('unit test', () => {
+  describe('buildItems', () => {
     let inputs = [
       'ITEM000001',
       'ITEM000001',
@@ -51,7 +51,7 @@ describe('unit test',()=> {
       'ITEM000005',
       'ITEM000005'
     ];
-    it('should return correct items', ()=> {
+    it('should return correct items', () => {
       const countedItems = [
         {
           item: {
@@ -60,23 +60,23 @@ describe('unit test',()=> {
             unit: '瓶',
             price: 3.00
           },
-            count: 5
+          count: 5
         },
         {
-          item:{
-          barcode: 'ITEM000003',
-          name: '荔枝',
-          unit: '斤',
-          price: 15.00
+          item: {
+            barcode: 'ITEM000003',
+            name: '荔枝',
+            unit: '斤',
+            price: 15.00
           },
           count: 2
         },
         {
-          item:{
-          barcode: 'ITEM000005',
-          name: '方便面',
-          unit: '袋',
-          price: 4.50
+          item: {
+            barcode: 'ITEM000005',
+            name: '方便面',
+            unit: '袋',
+            price: 4.5
           },
           count: 3
         }
@@ -85,4 +85,82 @@ describe('unit test',()=> {
     });
   });
 });
+/*
+describe('unit test ', () => {
+  describe('getDiscount', () => {
+    let countedItems = [
+      {
+        item: {
+          barcode: 'ITEM000001',
+          name: '雪碧',
+          unit: '瓶',
+          price: 3.00
+        },
+        count: 5
+      },
+      {
+        item: {
+          barcode: 'ITEM000003',
+          name: '荔枝',
+          unit: '斤',
+          price: 15.00
+        },
+        count: 2
+      },
+      {
+        item: {
+          barcode: 'ITEM000005',
+          name: '方便面',
+          unit: '袋',
+          price: 4.5
+        },
+        count: 3
+      }
+    ];
 
+    it('will get right item', () => {
+      const discount = [
+        {
+          original: {
+            item: {
+              barcode: 'ITEM000001',
+              name: '雪碧',
+              unit: '瓶',
+              price: 3.00
+            },
+            count: 5
+          },
+          subsave: 3
+        },
+        {
+          original: {
+            item: {
+              barcode: 'ITEM000003',
+              name: '荔枝',
+              unit: '斤',
+              price: 15.00
+            }
+            ,
+            count: 2
+          },
+          subsave: 0
+        },
+        {
+          original: {
+            item: {
+              barcode: 'ITEM000005',
+              name: '方便面',
+              unit: '袋',
+              price: 4.5
+            },
+            count: 3
+          },
+          subsave: 4.5
+        }
+      ];
+      expect(getDiscount(countedItems)).toEqual(discount);
+
+    });
+  });
+})
+;*/
